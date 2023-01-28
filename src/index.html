@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Technical Meta Tags -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary Meta Tags -->
+  <title>FastPGP - Learn</title>
+  <meta name="title" content="FastPGP - Learn">
+  <meta name="description" content="FastPGP - Fast and easy PGP utility and learning platform. Learn and use PGP easily, with our help.">
+
+  <!-- Open Graph / Facebook Meta Tags-->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://learn.fastpgp.com">
+  <meta property="og:title" content="FastPGP - Learn">
+  <meta property="og:description" content="FastPGP - Fast and easy PGP utility and learning platform. Learn and use PGP easily, with our help.">
+  <meta property="og:image" content="https://learn.fastpgp.com/assets/imgs/logos/fastpgp_logo_square.png">
+
+  <!-- Twitter Meta Tags -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://learn.fastpgp.com">
+  <meta property="twitter:title" content="FastPGP - Learn">
+  <meta property="twitter:description" content="FastPGP - Fast and easy PGP utility and learning platform. Learn and use PGP easily, with our help.">
+  <meta property="twitter:image" content="https://learn.fastpgp.com/assets/imgs/logos/fastpgp_logo_square.png">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/imgs/favicon/favicon.ico">
+  
+  <!-- STYLES -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <!-- Heading -->
+  <header>
+    <a href="https://www.fastpgp.com"><img src="assets/imgs/logos/fastpgp_logo_text.png" alt="FastPGP logo"></a>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <h2><i> Let's start with the basics..</i></h2>
+
+    <hr>
+    <section>
+      <h3>What even is PGP?</h3>
+      <div class="text-container">
+        <p>PGP, or Pretty Good Privacy is encryption software created by Phil Zimmerman. Zimmerman wanted to share awarness of privacy and how to protect ourselves on the internet.</p>
+        <p>Phil belived that cryptography "is about the right to privacy, freedom of speech, freedom of political association, freedom of the press, freedom from unreasonable search and seizure, freedom to be left alone."</p>
+        <p style="text-align: center;">If you want to learn more about Phil and why he created PGP,<br> go to <a style="text-decoration: underline" href="https://www.philzimmermann.com/EN/essays/WhyIWrotePGP.html"><i>"Why I wrote PGP" by Phil Zimmerman</i></a></p>
+      </div>
+    </section>
+
+    <hr>
+    <section>
+      <h3>Okay.. How does PGP work?</h3>
+      <div class="text-container">
+        <p>We are not getting too technical here today, this guide is meant for complete beginners, and they don't need to know all the magic happening behind.</p>
+        <p>PGP Basics start with keys - private and public. PGP key is a string of data generated with PGP using encryption alghoritms. These keys are then used by you and others, to encrypt and decrypt messages.</p>
+        <p>Public key is the key you can freely give out to others. It is used by other people to encrypt messages or other data that they can then freely send, with no risk of it getting leaked, read by someone else than the recepient, or anything like that. They can even post it publicly, it doesn't matter. For everyone else, it's just a random string of characters, with no meaning.</p>
+        <p>Private key, is the key you use to decrypt messages encrypted with your public key that someone else sent you. YOU DON'T SHARE THIS KEY WITH ANYONE, UNDER ANY CIRCUMSTANCES.</p>
+      </div>
+    </section>
+
+
+    <h2><i>Enough text, let's get to examples..</i></h2>
+
+    <hr>
+    <section>
+      <h3>Bob and Alice</h3>
+      <div class="text-container">
+        <p>Bob and Alice is the usual example when learning about PGP.</p>
+        <p>Bob and Alice are working on a business together, and need to share some secret information. They don't want this information to be leaked or just read by someone else that might get access to their account or the conversation.</p>
+        <p>That's why they choose to use PGP</p>
+      </div>
+    </section>
+
+
+    <hr>
+    <section>
+      <h3>Generating keys</h3>
+      <div class="text-container">
+        <i style="text-align: center;">For this part of the learning process, open our <a style="text-decoration: underline" href="https://tool.fastpgp.com">FastPGP tool</a> in another tab.</i>
+        <p>Alice wants to send Bob a message encrypted with PGP, so Bob goes to the PGP tool of his choice and generates his PGP keypair.</p>
+        <p>He enters the required data: username, email and passphrase of his choice.<br> To make sure he doesn't forget his passphrase he writes it down on a piece of paper.</p>
+        <p>Now he stores his PRIVATE KEY securely, and sends his PUBLIC KEY over to Alice.</p>
+        <img src="assets/imgs/process/generatebob.png" alt="Bob generating his key in tool.fastpgp.com">
+        <i style="text-align: center;">Go to tool.fastpgp.com and try it for yourself.</i>
+        <br>
+      </div>
+    </section>
+
+    <hr>
+    <section>
+      <h3>Alice sends a mesage</h3>
+      <div class="text-container">
+        <p>Alice receives Bob's public key, and goes over to tool.fastpgp.com and chooses the "Encrypt" option.</p>
+        <p>Alice enters Bob's public key, writes the message for him, and leaves out the optional inputs for now.</p>
+        <p>In the result window, she now has encrypted message that she sends back over to Bob, without worrying about privacy.</p>
+        <img src="assets/imgs/process/encryptalice.png" alt="Alice encrypting message with Bob's public key.">
+
+        <i style="text-align: center;">Go to tool.fastpgp.com and try it for yourself.</i>
+        <br>
+      </div>
+    </section>
+
+    <hr>
+    <section>
+      <h3>Bob reads the message</h3>
+      <div class="text-container">
+        <p>Bob receives Alice's message, and goes over to tool.fastpgp.com and chooses the "Decrypt" option.</p>
+        <p>Bob enters message from Alice, and his private key and passphrase he chose earlier.</p>
+        <p>In the result window, he now can read the message from Alice in plain text.</p>
+        <img src="assets/imgs/process/decryptbob.png" alt="Bob decrypting message from Alice with his private key.">
+
+        <i style="text-align: center;">Go to tool.fastpgp.com and try it for yourself.</i>
+        <br>
+      </div>
+    </section>
+
+    <h2><i>Okay, what about the Sign and Verify options?</i></h2>
+    <div class="text-container">
+      <p>Let's say that you are someone known publicly, but people often fake your posts and messages for their profit.</p>
+      <p>PGP can help even with that. The sign option uses the private key to add a signature to the end of cleartext message, it's not encrypting the message, just adding a virtual signature.</p>
+      <p>If people have your public key, they can then verify this signature with the help of the Verify option. If the private key corresponding to this public key signed this message, it verifies. If the message was signed by someone else, signature failes to verify.</p>
+      <img src="assets/imgs/process/signbob.png" alt="Bob writing a message and signing it with his private key.">
+      <br>
+      <img src="assets/imgs/process/verifyalice.png" alt="Alice verifying Bob's message with his public key.">
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <hr>
+    <i>We use Swetrix to gather analytics about this website usage.<br>None of your data is saved - more at <a href="https://swetrix.com">https://swetrix.com</a></i>
+    <a href="https://github.com/FastPGP"><h2>Check this project out at github!</h2></a>
+    <a href="https://www.fastpgp.com/donate"><h2>Donate to help with the development!</h2></a>
+    <i>- made by <a href="#">j4kubj</a> -</i>
+  </footer>
+
+  <!-- SWETRIX ANALYTICS CODE - WE DO NOT SAVE OR SHARE YOUR DATA, THIS IS JUST FOR INFORMATION PURPOSES -->
+  <script src="https://swetrix.org/swetrix.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      swetrix.init('bMKOrc5Zbjs1')
+      swetrix.trackViews()
+    })
+  </script>
+</body>
+</html>

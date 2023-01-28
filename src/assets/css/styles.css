@@ -1,0 +1,160 @@
+/* ----------- */
+/* Font styles */
+/* ----------- */
+
+@font-face {
+    font-family: Montserrat;
+    src:url("../fonts/Montserrat-Regular.ttf");
+}
+
+* {
+    font-family: 'Montserrat';
+}
+
+
+
+
+
+/* --------------- */
+/* Color variables */
+/* --------------- */
+:root {
+    --main: #09090C;
+    --accent: #FFEBD6;
+}
+
+
+
+
+
+/* -------------- */
+/* General styles */
+/* -------------- */
+html, body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+    background-color: var(--main);
+    color: var(--accent);
+}
+
+button {
+    margin: 5px;
+    padding: 20px 50px;
+    background-color: var(--accent);
+    color: var(--main);
+    border: 1px solid var(--main);
+    transition: background-color 1s,
+                color .5s,
+                border 1s;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+button:hover, button.selected {
+    background-color: var(--main);
+    color: var(--accent);
+    border: 1px solid var(--accent);
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+hr {
+    width: 90%;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+    text-align: center;
+}
+
+
+
+/* ------------- */
+/* Header styles */
+/* ------------- */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+header > a {
+    width: 15%;
+    margin: 50px;
+}
+
+header > a > img {
+    width: 100%;
+}
+
+
+
+
+/* ----------- */
+/* Main styles */
+/* ----------- */
+main, section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+main > hr {
+    width: 5%;
+}
+
+.text-container {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.text-container > img {
+    width: 80%;
+    border: 1px solid var(--accent);
+    align-self: center;
+}
+
+
+
+
+
+/* ------------ */
+/* Phone styles */
+/* ------------ */
+@media only screen and (max-width: 768px) {
+    header > a {
+        width: 60%;
+        margin: 50px;
+    }
+
+    main, section {
+        flex-direction: column;
+    }
+
+    .text-container {
+        width: 90%;
+    }
+    
+}
